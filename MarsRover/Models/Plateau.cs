@@ -6,7 +6,7 @@ namespace MarsRover.Models
 {
     public class Plateau
     {
-        private List<Rover> _rovers;
+        private List<Rover> _rovers = new List<Rover>();
         private int x {get;set;}
         private int y {get;set;}   
 
@@ -25,8 +25,7 @@ namespace MarsRover.Models
             
             Rover newRover = new Rover(newPosition, newOrientation, commands);    
 
-            _rovers.Add(newRover);        
-
+            _rovers.Add(newRover);    
         }
 
         public string Explore()

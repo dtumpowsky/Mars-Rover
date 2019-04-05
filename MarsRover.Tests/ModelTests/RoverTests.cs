@@ -19,7 +19,6 @@ namespace MarsRover.Tests
             Position newPosition = new Position(5,5);
             
             Orientation newOrientation = new Orientation("N");
-            Commands commands = new Commands();
 
             char[] commandsChar = {'M'};
 
@@ -37,7 +36,6 @@ namespace MarsRover.Tests
             Position newPosition = new Position(5,5);
             
             Orientation newOrientation = new Orientation("N");
-            Commands commands = new Commands();
 
             char[] commandsChar = {'M','M'};
 
@@ -52,10 +50,8 @@ namespace MarsRover.Tests
         [TestMethod]
         public void Does_Commands_Loop_at_Value_0()
         {
-            Position newPosition = new Position(5,5);
-            
+            Position newPosition = new Position(5,5);            
             Orientation newOrientation = new Orientation("N");
-            Commands commands = new Commands();
 
             char[] commandsChar = {'L', 'M'};
 

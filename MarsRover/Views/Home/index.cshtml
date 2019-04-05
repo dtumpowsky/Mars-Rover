@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mars Rover</title>
+  </head>
+  <body>
+
+    <form action="/rover" method="post">
+      <div>
+        <label for="plateau-coords">Plateau Coordinates</label>
+        <input id="plateau-coords" name="plateau-coords" type="text" required>
+      </div>
+      <div>
+        <label for="rover-coord">Rover X Coordinates</label>
+        <input id="rover-coord" name="rover-coords"type="text" required>
+      </div>
+      <div>
+        <label for="rover-commands">Rover Commands</label>
+        <input id="rover-commands" name="rover-commands" type="text" >
+      </div>
+      <button class="btn btn-primary" type="submit">Rove</button>
+    </form>
+
+    <label>Rover Output(s)</label>  @ViewBag.output
+  </body>
+</html>
