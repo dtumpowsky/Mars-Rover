@@ -8,7 +8,6 @@ namespace MarsRover.Models
 {
     public class Commands
     {
-
         public static void Execute(Position position, Orientation orientation, char letter)
         {
             switch (letter)

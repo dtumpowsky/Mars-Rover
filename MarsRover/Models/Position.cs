@@ -7,7 +7,6 @@ namespace MarsRover.Models
 {
     public class Position
     {
-
         public int x {get;set;}
         public int y {get;set;}
 
@@ -16,6 +15,5 @@ namespace MarsRover.Models
             this.x = x;
             this.y = y;
         }
-
     }    
 }

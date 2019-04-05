@@ -17,7 +17,7 @@ namespace MarsRover.Models
             this.x = x;
             this.y = y;
         }
-
+        
         public void DropRover(int x, int y, string letter, char[] commands)
         {
             Position newPosition = new Position(x, y);
@@ -32,7 +32,7 @@ namespace MarsRover.Models
         {
             foreach(Rover rover in _rovers)
             {
-                _output += rover.Rove() + "\r\n\r\n";
+                _output += rover.Rove() + "<br/><br/>";
             }
 
             return _output;
