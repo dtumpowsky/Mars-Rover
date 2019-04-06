@@ -1,7 +1,7 @@
 ## _MarsRover_
 ### Version 1.0
 #### By: David Tumpowsky
-#### Date: April 2, 2018
+#### Date: April 2, 2019
 
 ##### Description
 
@@ -51,7 +51,8 @@ Expected Output:
 ```
 ##### Setup/Installation Requirements
 
-- Download .NET
+- clone project
+- migrate to MarsRover folder
 - dotnet restore
 - dotnet build
 - dotnet run
