@@ -7,6 +7,7 @@ namespace MarsRover.Models
 {
     public class Rover
     {
+        private Plateau _plateau {get; set;}
         private Position _position;
         private Orientation _orientation;
         private char[] _commands;
@@ -23,8 +24,15 @@ namespace MarsRover.Models
             {
                 Commands.Execute(_position, _orientation, letter);
             }
-            
+
+            if (_position.x < 0 || _position.y < 0)
+            {
+                return "INVALID MOVE";
+            } 
+            else 
+            {           
             return _position.x + " " + _position.y + " " + _orientation.Output;
+            }
         }
     }
 

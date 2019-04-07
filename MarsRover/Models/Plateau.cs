@@ -18,13 +18,17 @@ namespace MarsRover.Models
             this.y = y;
         }
         
-        public void DropRover(int x, int y, string letter, char[] commands)
+        public void DropRover(int roverX, int roverY, string letter, char[] commands)
         {
-            Position newPosition = new Position(x, y);
+            Plateau newPlateau = new Plateau(x, y);
+            Position newPosition = new Position(roverX, roverY);
             Orientation newOrientation = new Orientation(letter);
             
             Rover newRover = new Rover(newPosition, newOrientation, commands);    
-
+            if(newPosition.x > x || newPosition.y > y)
+            {
+                throw new System.InvalidOperationException("Can Not Place Rover Here");
+            }
             _rovers.Add(newRover);    
         }
 
@@ -32,8 +36,17 @@ namespace MarsRover.Models
         {
             foreach(Rover rover in _rovers)
             {
-                _output += rover.Rove() + "<br/><br/>";
+                string marsRover = rover.Rove();
+
+                if(marsRover[0] > x || marsRover[1] > y)
+                {
+                    throw new System.InvalidOperationException("THE ROVER FELL OFF THE PLATEAU");
+                }
+
+                _output += marsRover + "<br/><br/>";
+               
             }
+
 
             return _output;
         }
