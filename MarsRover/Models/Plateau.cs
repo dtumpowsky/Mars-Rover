@@ -38,11 +38,6 @@ namespace MarsRover.Models
             {
                 string marsRover = rover.Rove();
 
-                if(marsRover[0] > x || marsRover[1] > y)
-                {
-                    throw new System.InvalidOperationException("THE ROVER FELL OFF THE PLATEAU");
-                }
-
                 _output += marsRover + "<br/><br/>";
                
             }
